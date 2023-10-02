@@ -34,8 +34,16 @@ public class Main {
         }
         System.out.print("Enter your character's health value : ");
         health = scanner.nextInt();
+        while (health <= 0) {
+            System.out.println("The value must not be equal to or lower than 0!");
+            health = scanner.nextInt();
+        }
         System.out.print("Enter your character's minimum damage value : ");
         damageMin = scanner.nextInt();
+        while (damageMin <= 0) {
+            System.out.println("The value must not be equal to or lower than 0!");
+            damageMin = scanner.nextInt();
+        }
         System.out.print("Enter your character's maximum damage value : ");
         damageMax = scanner.nextInt();
         while (damageMax <= damageMin) {

@@ -32,13 +32,21 @@ abstract class Entity {
     }
 
     public void setDamageValues(int minDamage, int maxDamage) {
-        for (int i = minDamage; i <= maxDamage; i++) {
-            this.damageValues.add(i);
+        if (minDamage <= 0 || maxDamage <= 0 || minDamage > maxDamage) {
+            logger.log(Level.WARNING, "Incorrect damage value");
+        } else {
+            for (int i = minDamage; i <= maxDamage; i++) {
+                this.damageValues.add(i);
+            }
         }
     }
 
     public void setHealth(int healthValue) {
-        this.health = healthValue;
+        if (healthValue <= 0) {
+            logger.log(Level.WARNING, "Incorrect health value");
+        } else {
+            this.health = healthValue;
+        }
     }
 
     public int getAttack() {
