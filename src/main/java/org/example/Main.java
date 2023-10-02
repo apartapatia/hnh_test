@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.Entity.Monster;
-import org.example.Entity.Player;
+import org.example.entity.Monster;
+import org.example.entity.Player;
 
 import java.util.Scanner;
 
