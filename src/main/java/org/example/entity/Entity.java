@@ -42,7 +42,7 @@ abstract class Entity {
     }
 
     public void setHealth(int healthValue) {
-        if (healthValue <= 0) {
+        if (healthValue < 0) {
             logger.log(Level.WARNING, "Incorrect health value");
         } else {
             this.health = healthValue;
